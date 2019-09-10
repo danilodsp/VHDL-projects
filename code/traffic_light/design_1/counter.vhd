@@ -3,7 +3,7 @@
  use ieee.std_logic_arith.all;
  use ieee.std_logic_unsigned.all;
  
- entity contador is port
+ entity counter is port
  (
 	CLOCK		 : in std_logic;
 	ZERA		 :	in std_logic;
@@ -11,9 +11,9 @@
 	SAIDA_CONT:	out std_logic_vector (3 downto 0)
 
  );
- end contador;
+ end counter;
  
- architecture projeto of contador is 
+ architecture projeto of counter is 
  signal conte : std_logic_vector(3 downto 0);
  begin
 	

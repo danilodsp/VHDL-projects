@@ -3,14 +3,14 @@
  use IEEE.STD_LOGIC_ARITH.ALL;
  use IEEE.STD_LOGIC_UNSIGNED.ALL;
  
- entity gerador_clock is
+ entity clock_generator is
  port(
   clock_in  : in std_logic;
   count     : buffer std_logic_vector(3 downto 0):="0000";
   clock_out : out std_logic);
- end gerador_clock;
+ end clock_generator;
  
- architecture teste of gerador_clock is
+ architecture teste of clock_generator is
  begin
  
   -- quando o contador é igual a 4

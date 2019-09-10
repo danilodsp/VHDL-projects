@@ -3,7 +3,7 @@
  use ieee.std_logic_arith.all;
  use ieee.std_logic_unsigned.all;
  
- entity botao is port
+ entity button is port
  (
 	CLOCK  : in std_logic;
 	RESET	 : in std_logic;
@@ -13,11 +13,11 @@
 	X		 :out std_logic 
   
  );
- end botao;
+ end button;
  
- architecture projeto of botao is
+ architecture projeto of button is
  
- component contador is port
+ component counter is port
  (
 	CLOCK		 : in std_logic;
 	ZERA		 :	in std_logic;
@@ -27,7 +27,7 @@
  );
  end component;
  
- component Flip_Flop_jk is port
+ component flipflop_JK is port
  ( 
 	j:   in std_logic;
 	k:   in std_logic;
@@ -44,8 +44,8 @@ end component;
  K1 <= '0';
  
  
- SAIDA_JK : Flip_Flop_jk port map (q => teste, reset => RESET, clk => CLOCK, j => and_out, k=> K1);
- SAIDA_CONTADOR: contador port map (CLOCK, RESET, INI_CON, s);
+ SAIDA_JK : flipflop_JK port map (q => teste, reset => RESET, clk => CLOCK, j => and_out, k=> K1);
+ SAIDA_CONTADOR: counter port map (CLOCK, RESET, INI_CON, s);
 
    process(CLOCK,RESET,DV,PH)
 	begin

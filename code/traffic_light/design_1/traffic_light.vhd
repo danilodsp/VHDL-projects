@@ -3,7 +3,7 @@
  use ieee.std_logic_arith.all;
  use ieee.std_logic_unsigned.all;
  
- entity semaforo_mod is port
+ entity traffic_light is port
  (
 	CLOCK  : in std_logic;
 	PH		 : in std_logic;
@@ -11,9 +11,9 @@
 	SINAL_H:out std_logic_vector (2 downto 0);
 	SINAL_V:out std_logic_vector (2 downto 0) 
  );
- end semaforo_mod;
+ end traffic_light;
  
- architecture projeto of semaforo_mod is
+ architecture projeto of traffic_light is
  
  component datapath is port
  (

@@ -1,16 +1,16 @@
  library ieee;
  use ieee.std_logic_1164.all;
  
- entity 	comparador is port
+ entity 	comparator is port
  (   
 	ENT_CONT : in std_logic_vector (3 downto 0);
 	ENT_MUX  : in std_logic_vector (3 downto 0);
 	SAIDA_COMP 	 : out std_logic
  
  );
- end comparador;
+ end comparator;
  
- architecture projeto of comparador is
+ architecture projeto of comparator is
  begin
  
 	process ( ENT_CONT (0), ENT_CONT(1), ENT_CONT (2), ENT_CONT(3), ENT_MUX (0), ENT_MUX (1), ENT_MUX (2), ENT_MUX (3))

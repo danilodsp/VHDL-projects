@@ -1,7 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity Flip_Flop_jk is port
+entity flipflop_JK is port
 ( 
 	j:   in std_logic;
 	k:   in std_logic;
@@ -9,7 +9,7 @@ entity Flip_Flop_jk is port
 	reset: in std_logic;
 	q:   out std_logic
 );
-end Flip_Flop_jk;
+end flipflop_JK;
 
 architecture arquitetura_jk of flip_Flop_jk is
 signal qx: std_logic;

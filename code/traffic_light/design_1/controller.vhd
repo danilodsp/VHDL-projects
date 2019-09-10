@@ -3,7 +3,7 @@
  use ieee.std_logic_arith.all;
  use ieee.std_logic_unsigned.all;
  
- entity controlador is port
+ entity controller is port
  (
 	CLOCK     : in std_logic;
 	X			 : in std_logic;
@@ -11,9 +11,9 @@
 	VETOR_SAIDA: out std_logic_vector (11 downto 0) 
 --SEL_DATA(1), SEL_DATA(0), INI_DATA, ZERA_DATA, RESET_DATA, INI_CONT12, SINAL_H(2), SINAL_H(1), SINAL_H(0), SINAL_V(2), SINAL_V(1), SINAL_V(0)--
  );
- end controlador;
+ end controller;
  
- architecture projeto of controlador is
+ architecture projeto of controller is
  
  type estados is (E0, E1, E2, E3, E4, E5, E6, E7, E8, E9);
  signal estado_atual: estados;
